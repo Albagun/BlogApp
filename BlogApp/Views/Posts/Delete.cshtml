@@ -1,0 +1,11 @@
+@model Post
+
+<p>
+    <b>@Model.PostId</b> kayıt numarasını silmek istediğinize emin misiniz? 
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="id" value="@Model.PostId">
+        <button type="submit" class="btn btn-danger">Evet</button>
+        <a asp-action="Index" class="btn btn-primary">Hayır</a>
+    </form>
+</p>
